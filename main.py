@@ -84,7 +84,8 @@ def main():
     y = (screen_height // 2) - (window_height // 2)
     root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-    icon_path = "deed.ico"
+    if getattr(sys, 'frozen', False): icon_path = os.path.join(sys._MEIPASS, 'ticket_parser.ico')
+    else: icon_path = 'ticket_parser.ico'
     root.iconbitmap(icon_path)
 
     label = tk.Label(root, text='Выберите PDF файл с билетами', font=font_big)
