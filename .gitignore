@@ -1,7 +1,10 @@
-# Игнорировать все PDF файлы
+# Игнорировать файлы
 *.pdf
+main.spec
 
 # Игнорировать папки
 output_jpg/
 __pycache__/
 .idea/
+dist/
+build/
